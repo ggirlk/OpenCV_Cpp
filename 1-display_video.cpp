@@ -1,7 +1,7 @@
 /*
  * to compile: g++ 1-display_video.cpp -o 1 -I./include `pkg-config --cflags --libs opencv4`
  * usage: ./0 videos/THECATHYPNOSE.mp4
- * click any key to quit
+ * click any key to stop the x to quit
 */
 #include <iostream>
 #include <opencv2/opencv.hpp>
