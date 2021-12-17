@@ -1,6 +1,6 @@
 /*
- * to compile: g++ 1-display_video.cpp -o 1 -I./include `pkg-config --cflags --libs opencv4`
- * usage: ./0 videos/THECATHYPNOSE.mp4
+ * to compile: g++ 2-moving_around.cpp -o 2 -I./include `pkg-config --cflags --libs opencv4`
+ * usage: ./1 videos/THECATHYPNOSE.mp4
  * click any key to stop the x to quit
 */
 #include <iostream>
