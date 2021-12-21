@@ -1,6 +1,6 @@
 /*
  * to compile: g++ 3-simple_transformation.cpp -o 3 -I./include `pkg-config --cflags --libs opencv4`
- * usage: ./3 videos/THECATHYPNOSE.mp4
+ * usage: ./3 images/wow.png
  * click ESC to quit
 */
 #include <iostream>
