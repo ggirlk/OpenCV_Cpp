@@ -51,6 +51,7 @@ int main(int argc, char **argv)
     if (!g_cap.isOpened()) {
         cout << "Cannot Open\n";
     }
+
     while (g_cap.isOpened())
     {
         if (g_run)
@@ -61,9 +62,10 @@ int main(int argc, char **argv)
             g_dontset = 1;
             setTrackbarPos("Position", "TrackbarSlide Show", current_pos);
             imshow("TrackbarSlide Show", frame);
-            g_run--;
+            g_run -= 1;
         }
         char c = (char) waitKey(10);
+
         if (c == 's') // single step
             {g_run = 1; cout << "Single step run = " << g_run << endl;}
         if (c == 'r') // run mode
