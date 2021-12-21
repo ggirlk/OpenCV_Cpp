@@ -20,13 +20,23 @@ using namespace cv;
 void show(Mat & image)
 {
     namedWindow("In", WINDOW_AUTOSIZE);
-    namedWindow("Out", WINDOW_AUTOSIZE);
     imshow("In", image);
 
-    Mat out;
+    Mat out, img_gray, img_cny;
 
-    pyrDown(image, out);
+    cvtColor(image, img_gray, COLOR_BGR2GRAY);
+
+    namedWindow("Gray", WINDOW_AUTOSIZE);
+    imshow("Gray", img_gray);
+
+    Canny(img_gray, img_cny, 10, 100, 3, true);
+
+    namedWindow("Canny", WINDOW_AUTOSIZE);
+    imshow("Canny", img_cny);
+
+    pyrDown(img_cny, out);
     
+    namedWindow("Out", WINDOW_AUTOSIZE);
     imshow("Out", out);
     waitKey(0);
 }
